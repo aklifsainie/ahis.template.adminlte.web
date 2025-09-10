@@ -1,0 +1,74 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - swg.net8.adminlte.web</title>
+
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+    <link rel="stylesheet" href="~/lib/fontawesome-free/css/all.min.css">
+    <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+    <link rel="stylesheet" href="~/lib/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css">
+    <link rel="stylesheet" href="~/lib/icheck-bootstrap/icheck-bootstrap.min.css">
+    <link rel="stylesheet" href="~/lib/jqvmap/jqvmap.min.css">
+	<link href="~/lib/adminlte/dist/css/adminlte.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="~/lib/overlayScrollbars/css/OverlayScrollbars.min.css">
+    <link rel="stylesheet" href="~/lib/daterangepicker/daterangepicker.css">
+	<link rel="stylesheet" href="~/lib/summernote/summernote-bs4.min.css">
+	<link href="~/css/site.css" rel="stylesheet" />
+    @await RenderSectionAsync("Styles", required: false)
+    
+</head>
+<body class="hold-transition sidebar-mini layout-fixed">
+    <div class="wrapper">
+
+        <!-- Preloader -->
+        @await Html.PartialAsync("~/Views/Shared/Components/Preloader/_Preloader.cshtml")
+
+        <!-- Navbar -->
+        @await Html.PartialAsync("~/Views/Shared/Components/Navbar/_Navbar.cshtml")
+
+        <!-- Sidebar -->
+        @await Html.PartialAsync("~/Views/Shared/Components/Sidebar/_Sidebar.cshtml")
+
+
+        <!-- Main Content -->
+        <div class="content-wrapper">
+
+            <!-- Content Header -->
+            @await Html.PartialAsync("~/Views/Shared/Components/ContentHeader/_ContentHeader.cshtml")
+
+            <section class="content">
+                <div class="container-fluid">
+                    @RenderBody()
+                </div>
+            </section>
+
+        </div>
+
+        <!-- Footer -->
+        @await Html.PartialAsync("~/Views/Shared/Components/Footer/_Footer.cshtml")
+
+    </div>
+
+
+
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/jquery-ui/jquery-ui.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/lib/chart.js/Chart.min.js"></script>
+    <script src="~/lib/sparklines/sparkline.js"></script>
+    <script src="~/lib/jqvmap/jquery.vmap.min.js"></script>
+    <script src="~/lib/jqvmap/maps/jquery.vmap.usa.js"></script>
+    <script src="~/lib/jquery-knob/jquery.knob.min.js"></script>
+    <script src="~/lib/moment/moment.min.js"></script>
+    <script src="~/lib/daterangepicker/daterangepicker.js"></script>
+    <script src="~/lib/tempusdominus-bootstrap-4/js/tempusdominus-bootstrap-4.min.js"></script>
+    <script src="~/lib/summernote/summernote-bs4.min.js"></script>
+    <script src="~/lib/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
+	<script src="~/lib/adminlte/dist/js/adminlte.min.js"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

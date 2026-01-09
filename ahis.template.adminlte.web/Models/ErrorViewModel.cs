@@ -1,4 +1,4 @@
-namespace swg.net8.adminlte.web.Models
+namespace ahis.template.adminlte.web.Models
 {
     public class ErrorViewModel
     {

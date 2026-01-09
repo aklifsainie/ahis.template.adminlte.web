@@ -11,8 +11,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\swg.net8.adminlte.application\swg.net8.adminlte.application.csproj" />
-    <ProjectReference Include="..\swg.net8.adminlte.domain\swg.net8.adminlte.domain.csproj" />
+    <ProjectReference Include="..\ahis.template.adminlte.application\ahis.template.adminlte.application.csproj" />
+    <ProjectReference Include="..\ahis.template.adminlte.domain\ahis.template.adminlte.domain.csproj" />
   </ItemGroup>
 
   <ItemGroup>

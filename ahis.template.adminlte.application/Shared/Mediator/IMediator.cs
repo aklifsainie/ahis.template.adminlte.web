@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace swg.net8.adminlte.application.Shared.Mediator
+namespace ahis.template.adminlte.application.Shared.Mediator
 {
     public interface IMediator
     {

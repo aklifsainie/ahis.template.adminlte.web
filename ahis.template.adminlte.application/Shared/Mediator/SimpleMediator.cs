@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using Microsoft.Extensions.DependencyInjection;
 
 
-namespace swg.net8.adminlte.application.Shared.Mediator
+namespace ahis.template.adminlte.application.Shared.Mediator
 {
     public class SimpleMediator : IMediator
     {

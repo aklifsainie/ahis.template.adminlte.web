@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 
-namespace swg.net8.adminlte.web.Controllers
+namespace ahis.template.adminlte.web.Controllers
 {
 
     public class EnrolmentController : Controller

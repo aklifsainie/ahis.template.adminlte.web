@@ -1,8 +1,8 @@
 using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
-using swg.net8.adminlte.web.Models;
+using ahis.template.adminlte.web.Models;
 
-namespace swg.net8.adminlte.web.Controllers
+namespace ahis.template.adminlte.web.Controllers
 {
     public class HomeController : Controller
     {

@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace swg.net8.adminlte.domain.Interfaces.Endpoints
+namespace ahis.template.adminlte.domain.Interfaces.Endpoints
 {
     public interface IGenericEndpoint<R> where R : class
     {

@@ -1,7 +1,11 @@
-﻿<aside class="main-sidebar elevation-4 bg-gradient-navy">
+﻿@{
+    var currentController = ViewContext.RouteData.Values["controller"]?.ToString();
+    var currentAction = ViewContext.RouteData.Values["action"]?.ToString();
+}
 
-    <a href="#" class="brand-link">
-        <img src="assets/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
+<aside class="main-sidebar elevation-2 bg-gradient-navy">
+
+    <a class="brand-link text-center">
         <span class="brand-text font-weight-light">Niger Passport</span>
     </a>
 
@@ -12,7 +16,7 @@
             <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
 
                 <li class="nav-item menu-open">
-                    <a href="#" class="nav-link active">
+                    <a href="/" class="nav-link @(currentController == "Home" ? "active" : "")">
                         <i class="nav-icon fas fa-home"></i>
                         <p>
                             Home
@@ -21,7 +25,7 @@
                 </li>
 
                 <li class="nav-item">
-                    <a href="#" class="nav-link">
+                    <a href="/Enrolment" class="nav-link @(currentController == "Enrolment" ? "active" : "")">
                         <i class="nav-icon fas fa-address-card"></i>
                         <p>
                             Enrolment
@@ -49,15 +53,6 @@
 
                 <li class="nav-item">
                     <a href="#" class="nav-link">
-                        <i class="nav-icon fas fa-print"></i>
-                        <p>
-                            Personalization
-                        </p>
-                    </a>
-                </li>
-
-                <li class="nav-item">
-                    <a href="#" class="nav-link">
                         <i class="nav-icon fas fa-passport"></i>
                         <p>
                             Issuance
@@ -70,6 +65,15 @@
                         <i class="nav-icon fas fa-search"></i>
                         <p>
                             Query
+                        </p>
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a href="#" class="nav-link">
+                        <i class="nav-icon fas fa-print"></i>
+                        <p>
+                            Print Receipt
                         </p>
                     </a>
                 </li>

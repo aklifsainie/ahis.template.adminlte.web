@@ -7,8 +7,16 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="8.0.7" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\swg.net8.adminlte.application\swg.net8.adminlte.application.csproj" />
     <ProjectReference Include="..\swg.net8.adminlte.domain\swg.net8.adminlte.domain.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="wwwroot\css\page\" />
   </ItemGroup>
 
 </Project>

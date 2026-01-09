@@ -1,0 +1,206 @@
+﻿@{
+    ViewData["Title"] = "New Enrolment Page";
+    ViewData["HeaderTitle"] = "";
+    ViewData["Breadcrumb"] = "Enrolment";
+}
+
+@section Scripts {
+    <script src="~/js/pages/enrolment/newEnrolment.js" asp-append-version="true"></script>
+}
+
+@section Styles {
+    <link href="~/css/components/skeleton.css" rel="stylesheet" />
+}
+
+<div class="container">
+<div id="formSkeleton">
+    <div class="card shadow rounded">
+
+        <div class="card-header border-0">
+            <ol class="breadcrumb bg-white">
+                <li class="breadcrumb-item text-muted">Home</li>
+                    <li class="breadcrumb-item text-muted">@ViewData["Breadcrumb"]</li>
+                <li class="breadcrumb-item">New enrolment</li>
+            </ol>
+
+        </div>
+
+        <div class="card-body">
+            <div class="row">
+                <div class="col-sm-6 mb-3">
+                    <div class="skeleton skeleton-input"></div>
+                </div>
+                <div class="col-sm-6 mb-3">
+                    <div class="skeleton skeleton-input"></div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-sm-12 mb-3">
+                    <div class="skeleton skeleton-input"></div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-sm-6 mb-3">
+                    <div class="skeleton skeleton-input"></div>
+                </div>
+                <div class="col-sm-6 mb-3">
+                    <div class="skeleton skeleton-input"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="formContent" style="display:none;">
+    
+    
+        <div class="card shadow rounded">
+
+            <div class="card-header border-0">
+                <ol class="breadcrumb bg-white">
+                    <li class="breadcrumb-item text-muted"><a href="/">Home</a></li>
+                    <li class="breadcrumb-item text-muted"><a href="/Enrolment">@ViewData["Breadcrumb"]</a></li>
+                    <li class="breadcrumb-item">New enrolment</li>
+                </ol>
+
+            </div>
+            <div class="card-body">
+                <form>
+                    <!-- Row 1: First / Last Name -->
+                    <div class="row">
+                        <div class="col-sm-6 mb-3">
+                            <label for="firstName">First Name <span class="text-danger">*</span></label>
+                            <input type="text" id="firstName" class="form-control" placeholder="e.g. Aklif" required>
+                        </div>
+                        <div class="col-sm-6 mb-3">
+                            <label for="lastName">Last Name <span class="text-danger">*</span></label>
+                            <input type="text" id="lastName" class="form-control" placeholder="e.g. Sainie" required>
+                        </div>
+                    </div>
+
+                    <!-- Row 2: Gender / DOB -->
+                    <div class="row">
+                        <div class="col-sm-6 mb-3">
+                            <label for="gender">Gender <span class="text-danger">*</span></label>
+                            <select id="gender" class="form-control" required>
+                                <option value="">-- Select gender --</option>
+                                <option>Male</option>
+                                <option>Female</option>
+                                <option>Other</option>
+                            </select>
+                        </div>
+                        <div class="col-sm-6 mb-3">
+                            <label for="dob">Date of Birth <span class="text-danger">*</span></label>
+                            <input type="date" id="dob" class="form-control" required>
+                        </div>
+                    </div>
+
+                    <!-- Row 3: Place / Country of Birth -->
+                    <div class="row">
+                        <div class="col-sm-6 mb-3">
+                            <label for="placeOfBirth">Place of Birth <span class="text-danger">*</span></label>
+                            <input type="text" id="placeOfBirth" class="form-control" placeholder="e.g. Kuala Lumpur" required>
+                        </div>
+                        <div class="col-sm-6 mb-3">
+                            <label for="countryOfBirth">Country of Birth <span class="text-danger">*</span></label>
+                            <select id="countryOfBirth" class="form-control" required>
+                                <option value="">-- Select country --</option>
+                                <!-- Populate dynamically from API -->
+                            </select>
+                        </div>
+                    </div>
+
+                    <!-- Row 4: Nationalities -->
+                    <div class="row">
+                        <div class="col-sm-6 mb-3">
+                            <label for="natAtBirth">Nationality at Birth <span class="text-danger">*</span></label>
+                            <select id="natAtBirth" class="form-control" required>
+                                <option value="">-- Select nationality --</option>
+                                <!-- Populate dynamically from API -->
+                            </select>
+                        </div>
+                        <div class="col-sm-6 mb-3">
+                            <label for="currentNat">Current Nationality <span class="text-danger">*</span></label>
+                            <select id="currentNat" class="form-control" required>
+                                <option value="">-- Select nationality --</option>
+                                <!-- Populate dynamically from API -->
+                            </select>
+                        </div>
+                    </div>
+
+                    <!-- Row 5: Marital Status / Profession -->
+                    <div class="row">
+                        <div class="col-sm-6 mb-3">
+                            <label for="maritalStatus">Marital Status <span class="text-danger">*</span></label>
+                            <select id="maritalStatus" class="form-control" required>
+                                <option value="">-- Select status --</option>
+                                <option>Single</option>
+                                <option>Married</option>
+                                <option>Divorced</option>
+                                <option>Widowed</option>
+                            </select>
+                        </div>
+                        <div class="col-sm-6 mb-3">
+                            <label for="profession">Profession <span class="text-danger">*</span></label>
+                            <input type="text" id="profession" class="form-control" placeholder="e.g. Software Engineer" required>
+                        </div>
+                    </div>
+
+                    <!-- Row 6: Email / Phone -->
+                    <div class="row">
+                        <div class="col-sm-6 mb-3">
+                            <label for="email">Email <span class="text-danger">*</span></label>
+                            <input type="email" id="email" class="form-control" placeholder="e.g. aklif@example.com" required>
+                        </div>
+                        <div class="col-sm-6 mb-3">
+                            <label for="phone">Phone Number <span class="text-danger">*</span></label>
+                            <input type="tel" id="phone" class="form-control" placeholder="e.g. 0123456789" required>
+                        </div>
+                    </div>
+
+                    <!-- Row 7: Address (Full Width) -->
+                    <div class="row">
+                        <div class="col-sm-12 mb-3">
+                            <label for="address">Address <span class="text-danger">*</span></label>
+                            <textarea id="address" class="form-control" rows="2" placeholder="e.g. A-10-20, Susur Jalil Sejahtera" required></textarea>
+                        </div>
+                    </div>
+
+                    <!-- Row 8: Postcode / City -->
+                    <div class="row">
+                        <div class="col-sm-6 mb-3">
+                            <label for="postcode">Postcode <span class="text-danger">*</span></label>
+                            <input type="text" id="postcode" class="form-control" placeholder="e.g. 50450" required>
+                        </div>
+                        <div class="col-sm-6 mb-3">
+                            <label for="city">City <span class="text-danger">*</span></label>
+                            <input type="text" id="city" class="form-control" placeholder="e.g. Kuala Lumpur" required>
+                        </div>
+                    </div>
+
+                    <!-- Row 9: Country -->
+                    <div class="row">
+                        <div class="col-sm-12 mb-3">
+                            <label for="addressCountry">Country <span class="text-danger">*</span></label>
+                            <select id="addressCountry" class="form-control" required>
+                                <option value="">-- Select country --</option>
+                                <!-- Populate dynamically from API -->
+                            </select>
+                        </div>
+                    </div>
+
+                    <!-- Submit -->
+                    <div class="text-right mt-5">
+                        <a href="/enrolment" class="btn btn-default">Cancel enrolment</a>
+                        <button type="submit" class="btn btn-primary">Enrol now</button>  
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+    

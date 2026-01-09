@@ -6,7 +6,7 @@
     <title>@ViewData["Title"] - swg.net8.adminlte.web</title>
 
 
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+    @* <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback"> *@
     <link rel="stylesheet" href="~/lib/fontawesome-free/css/all.min.css">
     <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
     <link rel="stylesheet" href="~/lib/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css">
@@ -24,7 +24,7 @@
     <div class="wrapper">
 
         <!-- Preloader -->
-        @await Html.PartialAsync("~/Views/Shared/Components/Preloader/_Preloader.cshtml")
+        @* @await Html.PartialAsync("~/Views/Shared/Components/Preloader/_Preloader.cshtml") *@
 
         <!-- Navbar -->
         @await Html.PartialAsync("~/Views/Shared/Components/Navbar/_Navbar.cshtml")
@@ -51,9 +51,6 @@
         @await Html.PartialAsync("~/Views/Shared/Components/Footer/_Footer.cshtml")
 
     </div>
-
-
-
 
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/jquery-ui/jquery-ui.min.js"></script>

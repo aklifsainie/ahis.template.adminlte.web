@@ -1,0 +1,199 @@
+﻿@{
+    ViewData["Title"] = "Enrolment Page";
+    ViewData["HeaderTitle"] = "";
+    ViewData["Breadcrumb"] = "Enrolment";
+}
+
+@section Styles {
+	<link href="~/css/components/skeleton.css" rel="stylesheet" />
+}
+
+
+@section Scripts {
+    <script src="~/js/pages/enrolment/enrolment.js" asp-append-version="true"></script>
+}
+
+<div id="formSkeleton">
+
+        <div class="row">
+            <div class="col-sm-6 mb-3">
+                <div class="skeleton skeleton-input"></div>
+            </div>
+            <div class="col-sm-6 mb-3">
+                <div class="skeleton skeleton-input"></div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-12 mb-3">
+                <div class="skeleton skeleton-input"></div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-6 mb-3">
+                <div class="skeleton skeleton-input"></div>
+            </div>
+            <div class="col-sm-6 mb-3">
+                <div class="skeleton skeleton-input"></div>
+            </div>
+        </div>
+</div>
+
+
+
+
+
+<div id="formContent" style="display:none;">
+
+    <div class="modal fade" id="modalEnrolmentForm" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl" role="document">
+            <div class="modal-content">
+                <div class="modal-header border-0">
+                    <ol class="breadcrumb bg-white">
+                        <li class="breadcrumb-item text-muted">Home</li>
+                        <li class="breadcrumb-item text-muted">@ViewData["Breadcrumb"]</li>
+                        <li class="breadcrumb-item">New enrolment</li>
+                    </ol>
+
+                </div>
+                <div class="modal-body">
+                    @* <div class="h5">Personal Information</div> *@
+                    <h6 class="fw-bold mb-3">Personal Information</h6>
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label for="firstName">First Name <span class="text-danger">*</span></label>
+                                <input type="text" id="firstName" name="firstName" class="form-control" value="" placeholder="e.g. Aklif" required />
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label for="lastName">Last Name <span class="text-danger">*</span></label>
+                                <input type="text" id="lastName" name="lastName" class="form-control" value="" placeholder="e.g. Sainie" required />
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="dob">Date of Birth <span class="text-danger">*</span></label>
+                        <input type="date" id="dob" class="form-control" required />
+                    </div>
+
+                    <!-- Birth Information -->
+                    <h6 class="fw-bold mt-4 mb-3">Birth Information</h6>
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label for="birthPlace">Place of Birth</label>
+                                <input type="text" id="birthPlace" class="form-control" placeholder="e.g. Kuala Lumpur" />
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label for="birthCountry">Birth Country</label>
+                                <select id="birthCountry" class="form-control">
+                                    <option value="">Select country</option>
+                                    <option>Malaysia</option>
+                                    <option>Singapore</option>
+                                    <option>Indonesia</option>
+                                    <!-- add list -->
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="nationality">Nationality</label>
+                        <select id="nationality" class="form-control">
+                            <option value="">Select nationality</option>
+                            <option>Malaysian</option>
+                            <option>Singaporean</option>
+                            <option>Indonesian</option>
+                            <!-- add list -->
+                        </select>
+                    </div>
+
+                    <!-- Address Information -->
+                    <h6 class="fw-bold mt-4 mb-3">Address</h6>
+                    <div class="form-group">
+                        <label for="address">Street Address</label>
+                        <textarea id="address" class="form-control" rows="2" placeholder="e.g. No 12, Jalan Damai 1"></textarea>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label for="postcode">Postcode</label>
+                                <input type="text" id="postcode" class="form-control" placeholder="e.g. 57000" />
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label for="addressCountry">Address Country</label>
+                                <select id="addressCountry" class="form-control">
+                                    <option value="">Select country</option>
+                                    <option>Malaysia</option>
+                                    <option>Singapore</option>
+                                    <option>Indonesia</option>
+                                    <!-- add list -->
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer border-0">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Cancel enrolment</button>
+                    <button type="button" class="btn btn-primary">Enrol now</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid">
+        <div class="d-flex justify-content-center align-items-center my-5">
+            <h2 class="display-4 mb-0">Search for enrolment</h2>
+            @* <button 
+                id="btnAddEnrolment"
+                type="button" 
+                data-toggle="modal" 
+                data-target="#exampleModal" 
+                class="ml-4 mt-2 btn btn-sm btn-primary d-flex align-items-center justify-content-around"
+                style="border-radius: 50px; width:150px;">
+
+                <i class="fas fa-plus mr-1"></i> Add enrolment
+            </button> *@
+
+            <a
+               href="/Enrolment/NewEnrolment"
+               class="ml-4 mt-2 btn btn-sm btn-primary d-flex align-items-center justify-content-around"
+               style="border-radius: 50px; width:150px;">
+
+                <i class="fas fa-plus mr-1"></i> Add enrolment
+            </a>
+        </div>
+        <div class="row">
+            <div class="col-md-8 offset-md-2">
+
+                <form action="simple-results.html">
+                    <div class="input-group input-group-lg">
+                        <input type="search"
+                               class="form-control"
+                               placeholder="Search for personal ID here to complete the enrolment"
+                               style="border-radius: 50px 0 0 50px;">
+
+                        <div class="input-group-append">
+                            <button type="submit" class="btn btn-default" style="border-radius: 0 50px 50px 0;">
+                                <i class="fas fa-search"></i>
+                            </button>
+                        </div>
+
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
